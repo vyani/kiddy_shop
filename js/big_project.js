@@ -1,8 +1,8 @@
 var colCount = 3;
-var colWidth = 40;
+var colWidth = 50;
 var margin = 20;
-var windowWidth = 120;
-var blocks = [];
+var windowWidth = 190;
+var blocks = [20,95,75];
 
 function setupBlocks() {
     windowWidth = $(window).width();
@@ -13,3 +13,25 @@ function setupBlocks() {
     }
     alert(blocks);
 }
+
+
+function positionBlocks() {
+    $('.block').each(function(){
+        var min = Array.min(blocks);
+        var index = $.inArray(min, blocks);
+        var leftPos = margin+(index*(colWidth+margin));
+        $(this).css({
+            'left':leftPos+'px',
+            'top':min+'px'
+        });
+        blocks[index] = min+block.outerHeight()+margin;
+    });
+}
+
+// Function to get the Min value in Array
+Array.min = function() {
+    return Math.min.apply(Math, array);
+};
+
+
+$(window).resize(setupBlocks);

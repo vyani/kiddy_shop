@@ -3,58 +3,11 @@
     
 <head>
 ABC Clothing    
-<link rel=stylesheet type="text/css" href="css/big_project.css">    
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="js/script-centered.js"></script>
+<link rel=stylesheet type="text/css" href="css/big_project1.css">    
 
-   
-<!--<link rel=stylesheet type="text/js" href="js/big_project.js">-->
-
-    
+<!--<link rel=stylesheet type="text/js" href="js/big_project.js">-->    
 <script>
-var colCount = 0;
-var colWidth = 400;
-var margin = 10;
-var spaceLeft = 10;
-var windowWidth = 900;
-var blocks = [];
 
-$(function(){
-	$(window).resize(setupBlocks);
-});
-
-function setupBlocks() {
-	windowWidth = $(window).width();
-	blocks = [];
-
-	// Calculate the margin so the blocks are evenly spaced within the window
-	colCount = Math.floor(windowWidth/(colWidth+margin*2));
-	spaceLeft = (windowWidth - ((colWidth*colCount)+(margin*(colCount-1)))) / 2;
-	console.log(spaceLeft);
-	
-	for(var i=0;i<colCount;i++){
-		blocks.push(margin);
-	}
-	positionBlocks();
-}
-
-function positionBlocks() {
-	$('.block').each(function(i){
-		var min = Array.min(blocks);
-		var index = $.inArray(min, blocks);
-		var leftPos = margin+(index*(colWidth+margin));
-		$(this).css({
-			'left':(leftPos+spaceLeft)+'px',
-			'top':min+'px'
-		});
-		blocks[index] = min+$(this).outerHeight()+margin;
-	});	
-}
-
-// Function to get the Min value in Array
-Array.min = function(array) {
-    return Math.min.apply(Math, array);
-};
 </script>
     
     
@@ -62,6 +15,8 @@ Array.min = function(array) {
 </head>
 
 <body>
+<script src='masonry.pkgd.min.js'></script> 
+  
     
 <!--front cover-->
 <img href=#>    
@@ -89,85 +44,85 @@ Array.min = function(array) {
     
 <!--products-->    
     
-<div onload="setupBlocks();">  
-<div class="block">    
+<div id='masonry'>  
+<div class="item">    
 <img src="img/1.jpg" height="40%">
 <button>Beli</button>    
 <button>Suka</button><!--fa fa love icon-->
 <button> Bagikan</button>
 </div>
     
-<div class="block">    
+<div class="item">    
 <img src="img/2.jpg">
 <button>Beli</button>    
 <button>Suka</button>
 <button> Bagikan</button>
 </div>
 
-<div class="block">    
+<div class="item thumbnail">    
 <img src="img/3.jpg">
 <button>Beli</button>    
 <button>Suka</button>
 <button> Bagikan</button>
 </div>
  
-<div class="block">    
+<div class="item medium">    
 <img src="img/4.jpg">
 <button>Beli</button>    
 <button>Suka</button>
 <button> Bagikan</button>
 </div>    
     
-<div class="block">    
+<div class="item">    
 <img src="img/5.jpg">
 <button>Beli</button>    
 <button>Suka</button>
 <button> Bagikan</button>
 </div> 
 
-<div class="block">    
+<div class="item large">    
 <img src="img/6.jpg" height="60%">
 <button>Beli</button>    
 <button>Suka</button>
 <button> Bagikan</button>
 </div>
 
-<div class="block">    
+<div class="item">    
 <img src="img/1.jpg" height="40%">
 <button>Beli</button>    
 <button>Suka</button><!--fa fa love icon-->
 <button> Bagikan</button>
 </div>
     
-<div class="block">    
+<div class="item">    
 <img src="img/2.jpg">
 <button>Beli</button>    
 <button>Suka</button>
 <button> Bagikan</button>
 </div>
 
-<div class="block">    
+<div class="item thumbnail">    
 <img src="img/3.jpg">
 <button>Beli</button>    
 <button>Suka</button>
 <button> Bagikan</button>
 </div>
  
-<div class="block">    
+<div class="item medium">    
 <img src="img/4.jpg">
 <button>Beli</button>    
 <button>Suka</button>
 <button> Bagikan</button>
 </div>    
     
-<div class="block">    
+<div class="item">    
 <img src="img/5.jpg">
 <button>Beli</button>    
 <button>Suka</button>
 <button> Bagikan</button>
 </div> 
 
-<div class="block">    
+<div class="item large">    
 <img src="img/6.jpg" height="60%">
 <button>Beli</button>    
 <button>Suka</button>

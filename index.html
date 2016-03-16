@@ -5,9 +5,9 @@
 Kiddy Clothing    
 <link rel=stylesheet type="text/css" href="css/big_project.css"> 
     
-<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="js/script-centered.js"></script>
@@ -19,10 +19,10 @@ Kiddy Clothing
     
 <script>
 var colCount = 0;
-var colWidth = 400;
+var colWidth = 314;
 var margin = 10;
-var spaceLeft = 10;
-var windowWidth = 900;
+var spaceLeft = 20;
+var windowWidth = 1200;
 var blocks = [];
 
 $(function(){
@@ -67,12 +67,13 @@ Array.min = function(array) {
 </head>
 
 <body>
+<div class="container">
     
 <!--front cover-->
 <img href=#>    
 <h1> ABC Clothing</h1>   
 <h3> Belanja baju anak. Kualitas Ok, Harga terjangkau. </h3>
-
+</div> <!--class container-->
 <!--hamburger-->
 <ul>
     <li>Kategori</li>
@@ -82,26 +83,24 @@ Array.min = function(array) {
 </ul>
     
     
-<!--category-->   
+<!--Top Navigation Bar-->   
 
-<ul>
-    <li>Perempuan</li>
-    <li>Dress</li>
-    <li>Laki-laki</li>
-    <li>Kaos</li>
-    <li>Celana</li>
-    <li>Kategori</li>
+<ul class="topnav">
+    <li><a class="active" href="#perempuan">Perempuan</a></li>
+    <li><a href="#dress">Dress</a></li>
+    <li><a href="#lakilaki">Laki-laki</a></li>
+    <li><a href="#kaos">Kemeja</a></li>
+    <li><a href="#kaos">Celana</a></li>
+    <li class="right"><a href="#kaos">Tentang Kami</a></li>
 </ul>    
 
 <!--Image header background-->
-
-<div class="wide">
-  	<div class="col-xs-5 line"><hr></div>
-    <div class="col-xs-2 logo">Kiddy Clothing</div>
-    <div class="col-xs-5 line"><hr></div>
+<div class="row">
+<div class="col-s-12">
+<img src="img/F1.jpg" width="260" height="145">
+</div>
 </div>
 
-    
 <!--products-->    
 <div onload="setupBlocks();" id="product"> 
     
@@ -197,6 +196,7 @@ Array.min = function(array) {
 <footer>
 
 </footer>    
+  
 </body>
 
 

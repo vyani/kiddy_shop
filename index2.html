@@ -1,53 +1,21 @@
-
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-.item {
-    width:  50px;
-    height: 50px;
-    float: left;
-    background: #2296DD;
-    border: 2px solid #333;
-}
-
-.item.thumbnail {
-    width:  100px;
-    height: 100px;
-    background: #cfcfcf
-}
-
-.item.medium {
-    width:  150px;
-    height: 50px;
-    background: #A6E392
-}
-
-.item.large {
-    width:  200px;
-    height: 100px;
-    background: #D092E3
-}
-
-
-.img_responsive {
-    position: relative
+img {
     width: 100%;
     height: auto;
-    
-    }
-
-.caption{
-    position: absolute;
-    width: 100%;
-    top: 500px;
-    left:0;
-    
 }
 
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
 @media only screen and (min-width: 600px) {
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
@@ -75,3 +43,19 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="row">
+<div class="col-s-12">
+<img src="img/F1.jpg" width="260" height="145">
+</div>
+</div>
+
+
+</body>
+</html>

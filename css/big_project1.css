@@ -1,6 +1,4 @@
-#product{
-    padding-top: 50%;
-}
+
 
 * {
     -webkit-box-sizing: border-box;
@@ -34,3 +32,8 @@
     background: #D092E3
 }
 
+
+    img {
+    width: 100%;
+    height:auto;
+    }

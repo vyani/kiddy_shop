@@ -7,7 +7,11 @@ ABC Clothing
 
 <!--<link rel=stylesheet type="text/js" href="js/big_project.js">-->    
 <script>
-
+ var container = document.querySelector('#masonry');
+  var masonry = new Masonry(container, {
+    columnWidth: 50,
+    itemSelector: '.item'
+  });
 </script>
     
     
@@ -15,7 +19,7 @@ ABC Clothing
 </head>
 
 <body>
-<script src='masonry.pkgd.min.js'></script> 
+<script src='js/masonry.pkgd.min.js'></script> 
   
     
 <!--front cover-->
@@ -59,7 +63,7 @@ ABC Clothing
 <button> Bagikan</button>
 </div>
 
-<div class="item thumbnail">    
+<div class="item">    
 <img src="img/3.jpg">
 <button>Beli</button>    
 <button>Suka</button>

@@ -2,11 +2,17 @@
 <html>
     
 <head>
-ABC Clothing    
-<link rel=stylesheet type="text/css" href="css/big_project.css">    
+Kiddy Clothing    
+<link rel=stylesheet type="text/css" href="css/big_project.css"> 
+    
+<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+    
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="js/script-centered.js"></script>
+<script src="js/script-centered.js"></script>
 
+    
    
 <!--<link rel=stylesheet type="text/js" href="js/big_project.js">-->
 
@@ -56,8 +62,7 @@ Array.min = function(array) {
     return Math.min.apply(Math, array);
 };
 </script>
-    
-    
+        
     
 </head>
 
@@ -78,6 +83,7 @@ Array.min = function(array) {
     
     
 <!--category-->   
+
 <ul>
     <li>Perempuan</li>
     <li>Dress</li>
@@ -86,11 +92,20 @@ Array.min = function(array) {
     <li>Celana</li>
     <li>Kategori</li>
 </ul>    
+
+<!--Image header background-->
+
+<div class="wide">
+  	<div class="col-xs-5 line"><hr></div>
+    <div class="col-xs-2 logo">Kiddy Clothing</div>
+    <div class="col-xs-5 line"><hr></div>
+</div>
+
     
 <!--products-->    
-<div id="product"> 
+<div onload="setupBlocks();" id="product"> 
     
-<div onload="setupBlocks();" margin-top= 10cm>  
+<div>  
 <div class="block">    
 <img src="img/1.jpg" height="40%">
 <button>Beli</button>    
@@ -175,9 +190,9 @@ Array.min = function(array) {
 <button> Bagikan</button>
 </div>
     
-    
+</div>  
 </div>  <!--setupBlocks function-->      
-</section>
+
 
 <footer>
 

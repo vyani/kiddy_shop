@@ -83,15 +83,15 @@ ul.topnav li.right {float: right;}
     ul.topnav li {float: none;}
 }
 
-/* sticky navbar */
-.active {
-    color: #fff !important;
-    text-decoration: underline !important;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+/* sticky top navbar */
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 40px;
+  background-color: #00a087;
 }
 
 

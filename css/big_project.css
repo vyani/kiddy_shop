@@ -1,4 +1,8 @@
 
+h1{
+    font-size: 300%;
+}
+
 
 
 /*Image Header*/
@@ -45,6 +49,53 @@ img {
 }
 
 
+/*Top Navigation Bar*/
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4ECDC4;
+    top: 0;
+    width: 100%;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #88d8b0;}
+
+ul.topnav li a.active {background-color: #FF6B6B;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+/* sticky navbar */
+.active {
+    color: #fff !important;
+    text-decoration: underline !important;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+
 /*products grid*/
 #product{
     margin-top: 1%;
@@ -67,6 +118,11 @@ img {
     transition: all 1s ease-in-out;
 }
 
+/*product image*/
 
+.margin_img {
+    margin-bottom: 10%;
+    position: absolute;
+}
 
  

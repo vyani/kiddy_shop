@@ -7,9 +7,18 @@
     
 <link rel=stylesheet type="text/css" href="css/big_project.css"> 
 
-<!--google font-->    
-<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>    
     
+<!--google font-->    
+<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>   
+ 
+<!--FitText.js-->    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="jquery.fittext.js"></script>
+<script>
+  jQuery("#responsive_headline").fitText();
+</script>    
+ 
+<!--bootstrap-->    
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -26,6 +35,7 @@
     
 <!--<link rel=stylesheet type="text/js" href="js/big_project.js">-->
 
+    
     
 <script>
 var colCount = 0;
@@ -79,11 +89,28 @@ Array.min = function(array) {
 </head>
 
 <body>
+<!--top navigation-->    
+<nav class="fixed-nav-bar">    
+<ul class="topnav">
+    <li><a class="active" href="#Kategori">Kategori</a></li>
+    <li><a href="#perempuan">Perempuan</a></li>
+    <li><a href="#dress">Dress</a></li>
+    <li><a href="#lakilaki">Laki-laki</a></li>
+    <li><a href="#kaos">Kemeja</a></li>
+    <li><a href="#kaos">Celana</a></li>
+    <li class="right"><a href="#kaos">Tentang Kami</a></li>
+</ul> 
+</nav>   
+    
+<!--front cover-->    
 <div class="container">
     
-<!--front cover-->
 
-<h1 style="font-family: ABeeZee"> Kiddy Shop</h1>   
+<div>
+<h1 class="title"> Kiddy Shop</h1>  
+</div>
+
+    
 <h3> Belanja baju anak. Kualitas Ok, Harga terjangkau. </h3>
 </div> <!--class container end-->
 
@@ -103,35 +130,10 @@ Array.min = function(array) {
 <img src="img/F1.jpg" width="260" height="145">
 </div>
 </div>
-
-<!--Top Navigation Bar option 1 
-
-<ul class="topnav" style= "position: fixed">
-    <li><a class="active" href="#Kategori">Kategori</a></li>
-    <li><a href="#perempuan">Perempuan</a></li>
-    <li><a href="#dress">Dress</a></li>
-    <li><a href="#lakilaki">Laki-laki</a></li>
-    <li><a href="#kaos">Kemeja</a></li>
-    <li><a href="#kaos">Celana</a></li>
-    <li class="right"><a href="#kaos">Tentang Kami</a></li>
-</ul> -->  
-
     
-<!--top navigation-->    
-<nav class="fixed-nav-bar">    
-<ul class="topnav">
-    <li><a class="active" href="#Kategori">Kategori</a></li>
-    <li><a href="#perempuan">Perempuan</a></li>
-    <li><a href="#dress">Dress</a></li>
-    <li><a href="#lakilaki">Laki-laki</a></li>
-    <li><a href="#kaos">Kemeja</a></li>
-    <li><a href="#kaos">Celana</a></li>
-    <li class="right"><a href="#kaos">Tentang Kami</a></li>
-</ul> 
-</nav>    
+ 
     
 <!--products-->   
- 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">    
     
 <div onload="setupBlocks();" id="product"> 

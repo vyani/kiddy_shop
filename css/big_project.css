@@ -1,7 +1,12 @@
+/*website title*/
 
-h1{
-    font-size: 300%;
+.title{
+    margin-top: 10%;
+    position: relative;
+    font-family: 'ABeeZee', sans-serif;
+    align-items: center;
 }
+
 
 
 

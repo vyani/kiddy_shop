@@ -1,0 +1,140 @@
+<!DOCTYPE>
+<html>
+    
+<head>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/script-centered.js"></script>
+    
+    
+<style>
+html {
+  width: 100%; height: 100%;
+}
+
+body {
+  margin: 0px; padding: 0px;
+  font: 14px 'Trebuchet MS', Helvetica, sans-serif;
+  width: 100%; height: 100%;
+}
+
+h1 {
+  margin: 0px;
+  padding: 100px 0px;
+  color: #FFF;
+  font: bold 40px 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+p {
+  margin: 0px;
+  padding: 10px 20px;
+  line-height: 1.5;
+}
+
+#header {
+  margin: 0px; padding: 0px;
+  position: relative;
+  background: #333;
+  width: 100%; height: 250px;
+}
+
+#navbar {
+  margin: 0px; padding: 0px;
+  position: relative;
+  background: #8F8F8F;
+  background: linear-gradient(#8F8F8F 0%, #555 50%, #444 51%, #222 100%);
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  width: 100%; height: 50px;
+}
+
+#navbar.fixedattop {
+  position: fixed; top: 0px;
+}
+
+#navbar a {
+  display: inline-block;
+  margin: 12px 15px; padding: 5px 0px;
+  background: #999;
+  background: linear-gradient(#999, #333);
+  color: #FFF;
+  font: 14px 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(0,0,0, 0.5) inline;
+  width: 100px;
+}
+
+#navbar a:hover {
+  background: #333;
+  background: linear-gradient(#222, #333);
+}
+
+#content {
+  margin: 0px;
+  padding: 20px 0px 0px 0px;
+}
+</style>
+
+<script>
+$(document).scroll(function() {
+  var documentScrollTop = $(document).scrollTop();
+  if (documentScrollTop > $('#header').height()) {
+    $('#navbar').addClass('fixedattop');
+    var shiftContent = $('#navbar').height();
+    $('#content').css('margin-top', shiftContent + 'px');
+  }
+  else if ($('#navbar').hasClass('fixedattop')) {
+    $('#navbar').removeClass('fixedattop');
+    $('#content').css('margin-top', '0px');
+  }
+});
+
+</script>
+
+    </head>
+    
+<body>    
+<div id="header">
+	<h1>STICKY NAVBAR</h1>
+</div>
+
+<div id="navbar">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+  <a href="#">Link 5</a>
+</div>
+
+<div id="content">
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam semper lorem vitae lacinia. Sed scelerisque dignissim turpis, nec bibendum enim lobortis non. Phasellus euismod, ligula id hendrerit porttitor, nibh orci mollis odio, id elementum tortor ligula in enim. Cras consectetur felis ornare orci fringilla malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc interdum tempor ultricies. Aliquam erat volutpat. Ut ac leo quis lorem iaculis tempor in a orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed mauris lectus, vulputate ut vestibulum non, pellentesque vitae mi.</p>
+
+	<p>Aliquam eleifend, urna pretium suscipit malesuada, lectus massa pulvinar lectus, nec tincidunt est nisl imperdiet metus. Morbi a condimentum diam. Morbi vel posuere turpis. Nulla tempor vulputate turpis tincidunt sollicitudin. In interdum, sapien et suscipit vulputate, mi justo elementum purus, ac vehicula ipsum tortor et neque. Morbi mattis, lorem sit amet semper porta, felis est laoreet nisi, ac aliquam velit lectus eget nunc. Nunc interdum tortor accumsan ligula fringilla ac tristique enim elementum. Vivamus sem sem, congue quis commodo at, imperdiet in nunc. Curabitur ut odio elit.</p>
+
+	<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In lacinia vehicula eros, in tempor orci viverra nec. Vivamus suscipit nibh sagittis mi laoreet ut faucibus ligula ullamcorper. Sed non nulla mauris. Suspendisse potenti. Nam facilisis interdum accumsan. Cras lacus lacus, volutpat vel vulputate quis, sodales nec odio. Suspendisse urna felis, adipiscing et fringilla in, placerat eget tortor. Nam venenatis aliquam eros vel dignissim. Proin accumsan nunc id sapien ultrices sed rutrum diam pretium. Pellentesque quis velit a sapien vulputate feugiat vitae eget nisi. Cras dapibus, purus sed posuere dapibus, tortor ligula rhoncus turpis, vel molestie arcu nunc quis arcu. Praesent tellus quam, aliquet quis sodales nec, volutpat varius mi.</p>
+
+	<p>Fusce mi eros, fringilla id malesuada ac, consectetur vitae mauris. Nulla scelerisque aliquet felis nec fermentum. Nullam at ipsum diam, eu rhoncus magna. Vivamus iaculis eros ac enim dictum sollicitudin. Pellentesque porta posuere ante sed molestie. Praesent eget velit magna, id aliquam augue. Maecenas adipiscing vehicula porta. Pellentesque congue bibendum urna vel blandit. Aliquam nulla mi, auctor sit amet rutrum vel, consectetur ornare sapien. Morbi eu vehicula eros. Integer non metus ut massa tincidunt tincidunt convallis ut nulla. Nulla facilisi.</p>
+
+	<p>Aliquam lacinia suscipit accumsan. Aliquam at velit vitae velit fringilla egestas. Nulla nec nisl quis diam bibendum sodales. Nullam diam turpis, dignissim a tincidunt non, lacinia eget enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus sem risus, congue vel semper sed, semper ut massa. Ut ligula felis, lacinia sit amet aliquet eget, laoreet dignissim sem.</p>
+
+  <p>Proin urna orci, auctor et faucibus nec, malesuada non leo. Etiam posuere commodo porta. Ut hendrerit fringilla augue, eu dapibus orci aliquet in. Morbi non velit at turpis bibendum imperdiet. In congue eleifend condimentum. Maecenas vel odio mauris. Mauris facilisis aliquam augue a eleifend. Fusce congue, velit ut ullamcorper placerat, metus ligula vestibulum mauris, nec malesuada lacus nibh in quam. Cras justo massa, vehicula id blandit nec, sodales non neque. Duis non nisl vel metus facilisis tempus quis eget eros. Ut leo odio, auctor eu lobortis imperdiet, sollicitudin et ligula. Sed faucibus odio id sapien porta ut mattis leo aliquet. Quisque purus justo, tempus at ultrices quis, rhoncus rhoncus mi. Aenean neque augue, dictum in rutrum non, hendrerit a lorem. Maecenas eleifend, lacus nec porttitor consectetur, nunc tellus lobortis turpis, sit amet luctus elit tortor sed enim.</p>
+
+	<p>Nulla tincidunt tortor ac lorem lacinia dignissim. Sed pulvinar ornare tortor ut mollis. Curabitur eu congue ante. Mauris dictum, urna cursus egestas fringilla, libero diam fermentum nisi, vehicula pharetra velit lacus vitae diam. Maecenas non risus a purus posuere pellentesque a eu felis. Maecenas semper pharetra dapibus. Sed id turpis lorem, quis varius mauris. Quisque odio nunc, sollicitudin eget accumsan vitae, lobortis vel mi. Vestibulum commodo, nisl quis eleifend laoreet, metus sapien sollicitudin quam, quis mattis enim nunc ac est. Nullam viverra, quam id cursus feugiat, magna turpis consequat mi, nec ultricies augue justo vitae risus.</p>
+
+  <p>Integer scelerisque ligula arcu, eu dictum augue. Nulla dui risus, pulvinar a egestas eget, ullamcorper in nibh. Integer sodales varius eleifend. Cras id enim et quam suscipit tempus eleifend eu metus. Nunc nec tortor cursus metus iaculis congue. Nam congue ultrices sollicitudin. Suspendisse ullamcorper placerat erat, quis gravida eros blandit in. In cursus consectetur volutpat. Maecenas adipiscing, tellus at venenatis rhoncus, quam tortor malesuada est, eget blandit dui nisl ac tortor.</p>
+
+	<p>Nullam bibendum libero sed nisi suscipit sed iaculis felis posuere. In hac habitasse platea dictumst. Nullam nec elit tincidunt nisi pharetra congue a vel sapien. Nunc vitae nunc augue. Nulla facilisi. Duis suscipit nibh aliquam enim sollicitudin malesuada. Integer commodo, lectus eu vehicula fermentum, neque dolor sollicitudin sem, ut venenatis elit est euismod metus. Sed elementum felis a urna vehicula imperdiet. Praesent at lectus enim. Suspendisse vulputate urna elementum tellus lobortis rhoncus.</p>
+
+	<p>Nullam sagittis euismod aliquam. Ut faucibus, tortor vitae convallis cursus, enim eros ultrices nisl, nec laoreet augue metus a est. Mauris nec tincidunt mauris. Sed bibendum consequat molestie. Pellentesque eu velit pellentesque neque molestie gravida eget eu velit. Fusce gravida neque eget neque tempor volutpat quis in lorem. Sed metus dolor, tristique sit amet porta ac, mattis et tortor. Nam gravida arcu in massa bibendum fermentum. Fusce malesuada, nibh et auctor feugiat, urna nisi egestas urna, non faucibus orci elit vitae mi.</p>
+
+</div>
+    </body>
+    </html>

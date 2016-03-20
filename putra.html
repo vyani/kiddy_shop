@@ -1,0 +1,269 @@
+<!DOCTYPE>
+<html>
+    
+<head>
+    
+    <title>Kiddy Shop</title>
+    
+<link rel=stylesheet type="text/css" href="css/big_project.css"> 
+
+    
+<!--google font-->    
+<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>     
+ 
+<!--bootstrap-->    
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/script-centered.js"></script>
+
+<!--font awesome-->
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  
+<!-- sticky navbar-->
+<link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css" rel="stylesheet" type="text/css">    
+    
+<!--<link rel=stylesheet type="text/js" href="js/big_project.js">-->
+
+    
+    
+<script>
+var colCount = 0;
+var colWidth = 314;
+var margin = 10;
+var spaceLeft = 20;
+var windowWidth = 1200;
+var blocks = [];
+
+$(function(){
+	$(window).resize(setupBlocks);
+});
+
+function setupBlocks() {
+	windowWidth = $(window).width();
+	blocks = [];
+
+	// Calculate the margin so the blocks are evenly spaced within the window
+	colCount = Math.floor(windowWidth/(colWidth+margin*2));
+	spaceLeft = (windowWidth - ((colWidth*colCount)+(margin*(colCount-1)))) / 2;
+	console.log(spaceLeft);
+	
+	for(var i=0;i<colCount;i++){
+		blocks.push(margin);
+	}
+	positionBlocks();
+}
+
+function positionBlocks() {
+	$('.block').each(function(i){
+		var min = Array.min(blocks);
+		var index = $.inArray(min, blocks);
+		var leftPos = margin+(index*(colWidth+margin));
+		$(this).css({
+			'left':(leftPos+spaceLeft)+'px',
+			'top':min+'px'
+		});
+		blocks[index] = min+$(this).outerHeight()+margin;
+	});	
+}
+
+Array.min = function(array) {
+    return Math.min.apply(Math, array);
+};
+
+/*category filter*/    
+
+</script>    
+</head>
+
+<body>   
+<!--front cover-->    
+
+
+<h1 class="title"> Kiddy Shop</h1>      
+<h3> Belanja baju anak. Kualitas Ok, Harga terjangkau.</h3>
+
+
+<!--top navigation -->   
+<nav class="fixed-nav-bar">
+<ul class="topnav">
+    <li><a href="index.html"> Semua Produk</a></li>
+    <li><a href="putri.html"><b>Putri</b></a></li>
+    <li><a class="active" href="putra.html"><b>Putra</b></a></li>
+    <li class="right"><a href="#kaos">Tentang Kami</a></li>
+</ul> 
+</nav>   
+    
+<!--Image header background: none-->
+    
+<!--products-->   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">    
+    
+<div onload="setupBlocks();" id="product"> 
+    
+<div class="block">    
+<img src="img/1.jpg" height="40%">
+    <p></p>
+<p>Gray Hoodie</p>
+<p><b> Rp 60.000</b> </p>
+    <p></p>
+<button class= "beli"><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>
+
+<div class="block"> 
+<img src="img/3.jpg">
+    <p></p>
+    <p>Greeny Pants</p>
+<p><b> Rp 69.000</b> </p>
+    <p></p>
+<button class= "beli"><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>
+   
+    
+<div class="block">    
+<img src="img/5.jpg">
+    <p></p>
+    <p>GAP-GAP Jacket</p>
+<p><b> Rp 79.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div> 
+    
+<div class="block">    
+<img src="img/8.jpeg">
+    <p></p>
+    <p>Blue DG Sandals </p>
+<p><b> Rp 119.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>
+
+<div class="block">    
+<img src="img/9.jpg">
+    <p></p>
+    <p>Litlle Blue Blazer</p>
+<p><b> Rp 55.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>
+ 
+<div class="block">    
+<img src="img/10.jpg">
+    <p></p>
+    <p>Teeth-shirt Jacket</p>
+<p><b> Rp 99.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>    
+    
+<div class="block">    
+<img src="img/11.jpg">
+    <p></p>
+    <p>My Kind of Shirt</p>
+<p><b> Rp 52.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div> 
+
+<div class="block">    
+<img src="img/13.png" height="60%">
+    <p></p>
+    <p>Tweedy Bunny Hat</p>
+<p><b> Rp 49.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>   
+    
+    
+<div class="block">    
+<img src="img/15.jpg" height="60%">
+    <p></p>
+    <p>Buneey Sweater</p>
+<p><b> Rp 69.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>     
+    
+ 
+<div class="block">    
+<img src="img/23.jpg" height="60%">
+    <p></p>
+    <p>My Jumpsuit Can Fly</p>
+<p><b> Rp 59.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>      
+    
+<div class="block">    
+<img src="img/25.png" height="60%">
+    <p></p>
+    <p>Pirate T-Shirt</p>
+<p><b> Rp 49.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>      
+
+<div class="block">    
+<img src="img/26.jpg" height="60%">
+    <p></p>
+    <p>Skull Sweater</p>
+<p><b> Rp 59.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>      
+    
+<div class="block">    
+<img src="img/30.jpg" height="60%">
+    <p></p>
+    <p>JumanJEANS</p>
+<p><b> Rp 72.000</b> </p>
+    <p></p>
+<button><i class="fa fa-shopping-cart"></i> Beli</button>
+<button><i class="fa fa-heart"></i> Suka</button>
+<button><i class="fa fa-share"></i> Bagikan</button>
+</div>      
+    
+    
+      
+</div>  <!--setupBlocks function end-->      
+
+
+<footer>
+
+</footer>    
+
+    
+
+    
+    
+</body>
+
+
+</html>

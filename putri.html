@@ -74,12 +74,19 @@ Array.min = function(array) {
     return Math.min.apply(Math, array);
 };
 
-    
+/*category filter*/    
+
 </script>
+        
+    
 </head>
 
-<body>   
+<body>
+
+    
 <!--front cover-->    
+
+
 <h1 class="title"> Kiddy Shop</h1>      
 <h3> Belanja baju anak. Kualitas Ok, Harga terjangkau.</h3>
 
@@ -87,19 +94,23 @@ Array.min = function(array) {
 <!--top navigation -->   
 <nav class="fixed-nav-bar">
 <ul class="topnav">
-    <li><a class="active">Produk</a></li>
-    <li><a href="#"><b>Putri</b></a></li>
-    <li><a href="#"><b>Putra</b></a></li>
+    <li><a href="index.html"> Semua Produk</a></li>
+    <li><a class= "active" href="putri.html"><b>Putri</b></a></li>
+    <li><a href="putra.html"><b>Putra</b></a></li>
     <li class="right"><a href="#kaos">Tentang Kami</a></li>
 </ul> 
-</nav>
+</nav>  
+    
+<!--hamburger
+<ul>
+    <li>Kategori</li>
+    <li>Konfirmasi Pembayaran</li>
+    <li>Tentang Kami</li>
+    <li>Tanya-Jawab/ FAQ</li>
+</ul>-->
+    
 
 <!--Image header background-->
-<div class="row">
-<div class="col-s-12">
-<img src="img/F1.jpg" width="260" height="145">
-</div>
-</div>
     
     
 <!--products-->   
@@ -107,16 +118,6 @@ Array.min = function(array) {
     
 <div onload="setupBlocks();" id="product"> 
     
-<div class="block">    
-<img src="img/1.jpg" height="40%">
-    <p></p>
-<p>Gray Hoodie</p>
-<p><b> Rp 60.000</b> </p>
-    <p></p>
-<button class= "beli"><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>
     
 <div class="block">    
 <img src="img/2.jpg">
@@ -125,17 +126,6 @@ Array.min = function(array) {
 <p><b> Rp 50.000</b> </p>
     <p></p>
 <button class="beli"><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>
-
-<div class="block"> 
-<img src="img/3.jpg">
-    <p></p>
-    <p>Greeny Pants</p>
-<p><b> Rp 69.000</b> </p>
-    <p></p>
-<button class= "beli"><i class="fa fa-shopping-cart"></i> Beli</button>
 <button><i class="fa fa-heart"></i> Suka</button>
 <button><i class="fa fa-share"></i> Bagikan</button>
 </div>
@@ -150,17 +140,6 @@ Array.min = function(array) {
 <button><i class="fa fa-heart"></i> Suka</button>
 <button><i class="fa fa-share"></i> Bagikan</button>
 </div>    
-    
-<div class="block">    
-<img src="img/5.jpg">
-    <p></p>
-    <p>GAP-GAP Jacket</p>
-<p><b> Rp 79.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div> 
 
 <div class="block putra">    
 <img src="img/6.jpg" height="60%">
@@ -195,38 +174,6 @@ Array.min = function(array) {
 <button><i class="fa fa-share"></i> Bagikan</button>
 </div>
 
-<div class="block">    
-<img src="img/9.jpg">
-    <p></p>
-    <p>Litlle Blue Blazer</p>
-<p><b> Rp 55.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>
- 
-<div class="block">    
-<img src="img/10.jpg">
-    <p></p>
-    <p>Teeth-shirt Jacket</p>
-<p><b> Rp 99.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>    
-    
-<div class="block">    
-<img src="img/11.jpg">
-    <p></p>
-    <p>My Kind of Shirt</p>
-<p><b> Rp 52.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div> 
 
 <div class="block">    
 <img src="img/13.png" height="60%">
@@ -348,17 +295,7 @@ Array.min = function(array) {
 <button><i class="fa fa-heart"></i> Suka</button>
 <button><i class="fa fa-share"></i> Bagikan</button>
 </div>      
-
-<div class="block">    
-<img src="img/23.jpg" height="60%">
-    <p></p>
-    <p>My Jumpsuit Can Fly</p>
-<p><b> Rp 59.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
+  
     
 <div class="block">    
 <img src="img/24.jpg" height="60%">
@@ -371,28 +308,7 @@ Array.min = function(array) {
 <button><i class="fa fa-share"></i> Bagikan</button>
 </div>  
     
-<div class="block">    
-<img src="img/25.png" height="60%">
-    <p></p>
-    <p>Pirate T-Shirt</p>
-<p><b> Rp 49.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
-
-<div class="block">    
-<img src="img/26.jpg" height="60%">
-    <p></p>
-    <p>Skull Sweater</p>
-<p><b> Rp 59.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
-    
+  
 <div class="block">    
 <img src="img/27.jpg" height="60%">
     <p></p>

@@ -27,10 +27,10 @@ ul.topnav li a.active {background-color: #FF6B6B;}
 
 ul.topnav li.right {float: right;}
 
-@media screen and (max-width: 600px){
+/*@media screen and (max-width: 600px){
     ul.topnav li.right, 
     ul.topnav li {float: none;}
-}
+}*/
 
 /* sticky top navbar */
 .fixed-nav-bar {
@@ -50,8 +50,9 @@ body {
 }
 
 .title{
-    margin-top: 5%;
-    position: relative;
+    margin-top: auto;
+    padding-top: 10%;
+    position:relative;
     font-family: 'ABeeZee', sans-serif;
     align-items: center;
 }
@@ -99,9 +100,6 @@ img {
     .col-12 {width: 100%;}
 }
 
-
-
-
 /*products grid*/
 #product{
     margin-top: 1%;
@@ -132,4 +130,8 @@ img {
 }
 
 /*button*/
+
+.beli{
+    color: #C44D58;
+}
 

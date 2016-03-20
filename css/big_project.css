@@ -44,6 +44,7 @@ ul.topnav li.right {float: right;}
 }
 
 
+
 /*website title*/
 body {
     font-size:100%; 
@@ -51,7 +52,6 @@ body {
 
 .title{
     margin-top: auto;
-    padding-top: 10%;
     position:relative;
     font-family: 'ABeeZee', sans-serif;
     align-items: center;
@@ -134,4 +134,6 @@ img {
 .beli{
     color: #C44D58;
 }
+
+
 

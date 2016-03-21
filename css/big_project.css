@@ -23,7 +23,7 @@ p {
 }
 
 @media only screen and (max-width: 400px) {
-    p { font-size:85%;}
+    p { font-size:15%;}
 }
 
 @media only screen and (max-width: 600px) {
@@ -112,7 +112,7 @@ h3{
 }
 
 @media only screen and (max-width: 400px) {
-    h3 {font-size:65%;}
+    h3 {font-size:65%;} 
 }
 
 @media only screen and (max-width: 600px) {

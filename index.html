@@ -122,7 +122,7 @@ $(document).scroll(function() {
 <div id="product"> 
     
 <div class="block">    
-<img src="img/1.jpg" height="40%">
+<span data-toggle="modal" data-target="#myModal"><img src="img/1.jpg" height="40%"></span>
     <p></p>
 <p>Gray Hoodie</p>
 <p><b> Rp 60.000</b> </p>
@@ -133,6 +133,31 @@ $(document).scroll(function() {
 <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
 </div>    
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Gray Hoodie</h4>
+          <div>    
+              <img src="img/1.jpg" height="40%">
+                <p></p>
+              <p>Gray Hoodie</p>
+              <p><b> Rp 60.000</b></p>
+              akslakslakslakslak
+                <p></p>
+              <div class="btn_center">    
+                  <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+                  <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+                  <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+              </div>    
+          </div>
+      </div>
+    </div>
+  </div>
+</div>    
     
 <div class="block">    
 <img src="img/2.jpg">

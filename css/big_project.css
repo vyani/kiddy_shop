@@ -54,9 +54,6 @@ p {
     p { font-size:90%;}
 }
 
-/*#header {
-  position: relative;
-}*/
 
 /*NAVBAR: Fixed at top*/
 .topnav{
@@ -97,9 +94,6 @@ ul.topnav li.right {float: right; padding-top: 0.4%}
 .topnav.fixedattop {
   position: fixed; top: 0px;
 }
-
-
-
 
 
 /*IMAGE HEADER*/
@@ -168,13 +162,11 @@ img {
     transition: all 1s ease-in-out;
 }
 
-
 /*PRODUCT IMAGE*/
 .margin_img {
     margin-bottom: 10%;
     position: absolute;
 }
-
 
 /*BUTTONS*/
 .btn-color1 {
@@ -204,14 +196,25 @@ img {
     width: 100%;
     position: static;
 }*/
-
-footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #efefef;
-    text-align: center;
+.content{
+  width: 850px; 
+  margin: auto;
+  margin-bottom: 350px; /* Same height as footer */
+  padding: 100px 0;
 }
+
+.fixed_footer{
+  width: 100%;
+  height: 350px;
+  background: #111;
+  position: sticky; left: 0; bottom: 0;
+  z-index: -100;
+}
+   .fixed_footer p{
+    color: #696969;
+    column-count: 2;
+    column-gap: 50px;
+    font-size: 1em;
+    font-weight: 300;
+  }
 

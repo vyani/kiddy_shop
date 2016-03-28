@@ -27,7 +27,6 @@ h3{
 
 
 /*FONT NAVBAR*/
-
 li{
     font-size:120%; 
     line-height: 1.6875;
@@ -100,6 +99,7 @@ ul.topnav li.right {float: right; padding-top: 0.4%}
 * {
     box-sizing: border-box;
 }
+
 img {
     width: 100%;
     height: auto;
@@ -185,6 +185,18 @@ img {
 }
 
 /*FOOTER*/
+#footer {
+	background:#4ECDC4;
+	padding:10px;
+	text-align:center;
+    clear: both;
+	}
+
+.wrap {
+    position:relative;
+    margin:0 auto;
+    width:900px;
+	}
 
 
 

@@ -6,11 +6,10 @@
     <title>Kiddy Shop</title>
     
 <link rel=stylesheet type="text/css" href="css/big_project.css"> 
-
-    
+   
 <!--google font-->    
-<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>     
- 
+<link href='https://fonts.googleapis.com/css?family=Roboto:700|Open+Sans:400,700' rel='stylesheet' type='text/css'>  
+
 <!--bootstrap-->    
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -22,15 +21,14 @@
 <!--font awesome-->
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  
+
 <!-- sticky navbar-->
 <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css" rel="stylesheet" type="text/css">    
-    
+   
 <!--<link rel=stylesheet type="text/js" href="js/big_project.js">-->
 
-    
-    
 <script>
+/*jquery grid*/
 var colCount = 0;
 var colWidth = 314;
 var margin = 10;
@@ -39,8 +37,8 @@ var windowWidth = 1200;
 var blocks = [];
 
 $(function(){
-	$(window).resize(setupBlocks);
-});
+    $(window).resize(setupBlocks);
+});  
 
 function setupBlocks() {
 	windowWidth = $(window).width();
@@ -70,336 +68,959 @@ function positionBlocks() {
 	});	
 }
 
+// Function to get the Min value in Array
 Array.min = function(array) {
     return Math.min.apply(Math, array);
 };
 
-/*category filter*/    
-
-</script>
-        
+/*sticky navbar*/
+$(document).scroll(function() {
+  var documentScrollTop = $(document).scrollTop();
+  if (documentScrollTop > $('#header').height()) {
+    $('.topnav').addClass('fixedattop');
+    var shiftContent = $('.topnav').height();
+    $('#content').css('margin-top', shiftContent + 'px');
+  }
+  else if ($('.topnav').hasClass('fixedattop')) {
+    $('.topnav').removeClass('fixedattop');
+    $('#header').css('margin-top', '0px');
+  }
+});    
     
+</script> 
 </head>
 
 <body onload="setupBlocks();"> 
 
     
 <!--front cover-->    
-
-
-<h1 class="title"> Kiddy Shop</h1>      
-<h3> Belanja baju anak. Kualitas Ok, Harga terjangkau.</h3>
-
+<div class="container-fluid">
+<h1 class="title" style="text-align: center"> <b>KIDDY SHOP</b></h1>      
+<h3 class="subtitle" style="text-align: center"> Belanja baju anak. Kualitas Ok, Harga terjangkau.</h3>
+</div>  
 
 <!--top navigation -->   
-<nav class="fixed-nav-bar">
 <ul class="topnav">
-    <li><a href="index.html"> Semua Produk</a></li>
-    <li><a class= "active" href="putri.html"><b>Putri</b></a></li>
+    <li><a href="index.html" style="font-family: Roboto; font-size: 18px"><b>KiddyShop.id</b></a></li>
+    <li><a href="putri.html" class="active" ><b>Putri</b></a></li>
     <li><a href="putra.html"><b>Putra</b></a></li>
-    <li class="right"><a href="#">Tentang Kami</a></li>
+    <li class="right"><a href="#"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
 </ul> 
-</nav>  
     
-<!--hamburger
-<ul>
-    <li>Kategori</li>
-    <li>Konfirmasi Pembayaran</li>
-    <li>Tentang Kami</li>
-    <li>Tanya-Jawab/ FAQ</li>
-</ul>-->
-    
-
-<!--Image header background-->
-    
-    
+<!--Image header background: not include-->
+        
 <!--products-->   
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">    
     
 <div id="product"> 
-    
-    
+  
+<!--Product2-->    
 <div class="block">    
-<img src="img/2.jpg">
+<span data-toggle="modal" data-target="#myModal2">
+    <img src="img/2.jpg"></span>  
     <p></p>
     <p>Marc J Tshirt</p>
-<p><b> Rp 50.000</b> </p>
-    <p></p>
-<button class="beli"><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 50.000</b> </p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>
- 
+
+<!-- Modal2-->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel2">Gray Hoodie</h4>
+        <div>
+        
+        <img src="img/2.jpg">
+        <p></p>
+        <p>Marc J Tshirt</p>
+        <p><b> Rp 50.000</b> </p>    
+    
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>      
+       
+<!--Product4-->      
 <div class="block">    
-<img src="img/4.jpg">
+<span data-toggle="modal" data-target="#myModal4">   
+    <img src="img/4.jpg"></span>
     <p></p>
     <p>Polka Striped</p>
-<p><b> Rp 59.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 59.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>    
 
-<div class="block putra">    
-<img src="img/6.jpg" height="60%">
+<!--Modal4-->    
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel4">Polka Striped</h4>
+        <div>
+        
+        <img src="img/4.jpg">
+        <p></p>
+        <p>Polka Striped</p>
+        <p><b> Rp 59.000</b></p>    
+    
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>      
+
+<!--Product6-->      
+<div class="block">    
+<span data-toggle="modal" data-target="#myModal6">   
+    <img src="img/6.jpg" height="60%"></span>
     <p></p>
     <p>Alura Dress</p>
-<p><b> Rp 55.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 55.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>
 
+<!--Modal6-->    
+<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel6">Alura Dress</h4>
+        <div>
+        
+        <img src="img/6.jpg">
+        <p></p>
+        <p>Alura Dress</p>
+        <p><b> Rp 55.000</b></p>    
+    
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>     
+
+<!--Product7-->      
 <div class="block">    
-<img src="img/7.jpg" height="40%" alt="baju anak murah">
+<span data-toggle="modal" data-target="#myModal7">      
+    <img src="img/7.jpg" height="40%" alt="baju anak murah"></span>
     <p></p>
     <p>Goldie Shiny Shoes</p>
-<p><b> Rp 65.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 65.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>
+
+<!--Modal7-->    
+<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel7">Goldie Shiny Shoes</h4>
+        <div>
+        
+        <img src="img/7.jpg">
+        <p></p>
+        <p>Goldie Shiny Shoes</p>
+        <p><b> Rp 65.000</b></p>    
     
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>     
+        
+<!--Product12-->      
 <div class="block">    
-<img src="img/8.jpeg">
-    <p></p>
-    <p>Blue DG Sandals </p>
-<p><b> Rp 119.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>
-
-
-<div class="block">    
-<img src="img/13.png" height="60%">
+<span data-toggle="modal" data-target="#myModal12">    
+    <img src="img/13.png" height="60%"></span>
     <p></p>
     <p>Tweedy Bunny Hat</p>
-<p><b> Rp 49.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 49.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>
-  
+
+<!--Modal12-->    
+<div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel12">Tweedy Bunny Hat</h4>
+        <div>
+        
+        <img src="img/13.png">
+        <p></p>
+        <p>Tweedy Bunny Hat</p>
+        <p><b> Rp 49.000</b></p>  
+        
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>     
+    
+<!--Product13-->      
 <div class="block">    
-<img src="img/14.png" height="60%">
+<span data-toggle="modal" data-target="#myModal13">   
+    <img src="img/14.png" height="60%"></span>
     <p></p>
     <p>Bonjour Petite Sweat Shirt</p>
-<p><b> Rp 99.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 49.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>    
+
+<!--Modal13-->    
+<div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel13">Bonjour Petite Sweat Shirt</h4>
+        <div>
+        
+        <img src="img/14.png">
+        <p></p>
+        <p>Bonjour Petite Sweat Shirt</p>
+        <p><b> Rp 49.000</b></p>  
+        
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
     
+<!--Product14-->      
 <div class="block">    
-<img src="img/15.jpeg" height="60%">
+<span data-toggle="modal" data-target="#myModal14">  
+    <img src="img/15.jpeg" height="60%"></span>
     <p></p>
     <p>Mineey Sweater</p>
-<p><b> Rp 69.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 69.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
 </div>  
+</div>  
+
+<!--Modal14-->    
+<div class="modal fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel14">Mineey Sweater</h4>
+        <div>
+        
+        <img src="img/15.jpeg">
+        <p></p>
+        <p>Mineey Sweater</p>
+        <p><b> Rp 69.000</b></p>  
+        
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
+<!--Product15-->      
 <div class="block">    
-<img src="img/15.jpg" height="60%">
+<span data-toggle="modal" data-target="#myModal15">   
+    <img src="img/15.jpg" height="60%"></span>
     <p></p>
     <p>Buneey Sweater</p>
-<p><b> Rp 69.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 69.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>     
 
+<!--Modal15-->    
+<div class="modal fade" id="myModal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel15">Buneey Sweater</h4>
+        <div>
+        
+        <img src="img/15.jpg">
+        <p></p>
+        <p>Buneey Sweater</p>
+        <p><b> Rp 69.000</b></p> 
+        
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!--Product16-->      
 <div class="block">    
-<img src="img/16.jpg" height="60%">
+<span data-toggle="modal" data-target="#myModal16">  
+    <img src="img/16.jpg" height="60%"></span>
     <p></p>
     <p>Floral Pants</p>
-<p><b> Rp 39.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 39.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
 </div>  
+</div>  
+ 
+<!--Modal16-->    
+<div class="modal fade" id="myModal16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel16">Floral Pants</h4>
+        <div>
+        
+        <img src="img/16.jpg">
+        <p></p>
+        <p>Floral Pants</p>
+        <p><b> Rp 39.000</b></p> 
+        
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
+<!--Product17-->      
 <div class="block">    
-<img src="img/17.jpg" height="60%">
+<span data-toggle="modal" data-target="#myModal17">  
+    <img src="img/17.jpg" height="60%"></span>
     <p></p>
     <p>Lace Me Up</p>
-<p><b> Rp 79.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 79.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>      
 
+<!--Modal17-->    
+<div class="modal fade" id="myModal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel17">Lace Me Up</h4>
+        <div>
+        
+        <img src="img/17.jpg">
+        <p></p>
+        <p>Lace Me Up</p>
+        <p><b> Rp 79.000</b></p>
+        
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!--Product18-->      
 <div class="block">    
-<img src="img/18.jpg" height="60%">
+<span data-toggle="modal" data-target="#myModal18">      
+    <img src="img/18.jpg" height="60%"></span>
     <p></p>
     <p>Your Kingdom Dress</p>
-<p><b> Rp 69.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 69.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>      
-    
-<div class="block">    
-<img src="img/19.jpg" height="60%">
-    <p></p>
-    <p>It's Nice, Overall</p>
-<p><b> Rp 65.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
-    
-<div class="block">    
-<img src="img/20.jpg" height="60%">
-    <p></p>
-    <p>Pinky Promise Shirt</p>
-<p><b> Rp 39.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+ 
+<!--Modal18-->    
+<div class="modal fade" id="myModal18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel18">Your Kingdom Dress</h4>
+        <div>
+        
+        <img src="img/18.jpg">
+        <p></p>
+        <p>Your Kingdom Dress</p>
+        <p><b> Rp 69.000</b></p>
+        
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
 </div>    
     
+<!--Product19-->      
 <div class="block">    
-<img src="img/21.jpg" height="60%">
+<span data-toggle="modal" data-target="#myModal19">   
+    <img src="img/19.jpg" height="60%"></span>
     <p></p>
-    <p>Ooh Lala Shoes</p>
-<p><b> Rp 89.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
-
-<div class="block">    
-<img src="img/22.jpg" height="60%">
-    <p></p>
-    <p>As White As Snow Dress</p>
-<p><b> Rp 89.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
-  
-    
-<div class="block">    
-<img src="img/24.jpg" height="60%">
-    <p></p>
-    <p>Roses Shoes</p>
-<p><b> Rp 79.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p>It's Nice, Overall</p>
+    <p><b> Rp 65.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
 </div>  
-    
-  
-<div class="block">    
-<img src="img/27.jpg" height="60%">
-    <p></p>
-    <p>Candy Dress</p>
-<p><b> Rp 65.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
 </div>      
+ 
+<!--Modal19-->    
+<div class="modal fade" id="myModal19" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel19">It's Nice, Overall</h4>
+        <div>
+        
+        <img src="img/19.jpg">
+        <p></p>
+        <p>It's Nice, Overall</p>
+        <p><b> Rp 65.000</b></p>
+        
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    
     
+<!--Product20-->      
 <div class="block">    
-<img src="img/28.jpg" height="60%">
+<span data-toggle="modal" data-target="#myModal20">      
+    <img src="img/20.jpg" height="60%"></span>
     <p></p>
-    <p>Swirl Yellow Dress</p>
-<p><b> Rp 75.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
+    <p>Pinky Promise Shirt</p>
+    <p><b> Rp 39.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
+</div>    
 
-<div class="block">    
-<img src="img/29.jpg" height="60%">
-    <p></p>
-    <p>I Heart T-shirt</p>
-<p><b> Rp 49.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
-    
-<div class="block">    
-<img src="img/30.jpg" height="60%">
-    <p></p>
-    <p>JumanJEANS</p>
-<p><b> Rp 72.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
-    
-<div class="block">    
-<img src="img/31.jpg" height="60%">
-    <p></p>
-    <p>Red Red Dress</p>
-<p><b> Rp 79.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
-</div>      
-    
-<div class="block">    
-<img src="img/32.jpg" height="60%">
-    <p></p>
-    <p>Dress Full of Bow</p>
-<p><b> Rp 52.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+<!--Modal20-->    
+<div class="modal fade" id="myModal20" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel20">Pinky Promise Shirt</h4>
+        <div>
+        
+        <img src="img/20.jpg">
+        <p></p>
+        <p>Pinky Promise Shirt</p>
+        <p><b> Rp 39.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
 </div>     
     
+<!--Product21-->      
 <div class="block">    
-<img src="img/34.jpg" height="60%">
+<span data-toggle="modal" data-target="#myModal21"> 
+    <img src="img/21.jpg" height="60%"></span>
+    <p></p>
+    <p>Ooh Lala Shoes</p>
+    <p><b> Rp 89.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
+</div>      
+
+<!--Modal21-->    
+<div class="modal fade" id="myModal21" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel21">Ooh Lala Shoes</h4>
+        <div>
+        
+        <img src="img/21.jpg">
+        <p></p>
+        <p>Ooh Lala Shoes</p>
+        <p><b> Rp 89.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    
+    
+<!--Product22-->      
+<div class="block">    
+<span data-toggle="modal" data-target="#myModal22">    
+    <img src="img/22.jpg" height="60%"></span>
+    <p></p>
+    <p>As White As Snow Dress</p>
+    <p><b> Rp 49.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
+</div>      
+
+<!--Modal22-->    
+<div class="modal fade" id="myModal22" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel22">As White As Snow Dress</h4>
+        <div>
+        
+        <img src="img/22.jpg">
+        <p></p>
+        <p>As White As Snow Dress</p>
+        <p><b> Rp 49.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>      
+    
+  
+<!--Product24-->      
+<div class="block">    
+<span data-toggle="modal" data-target="#myModal24">    
+    <img src="img/24.jpg" height="60%"></span>
+    <p></p>
+    <p>Roses Shoes</p>
+    <p><b> Rp 79.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
+</div>  
+ 
+<!--Modal24-->    
+<div class="modal fade" id="myModal24" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel24">Roses Shoes</h4>
+        <div>
+        
+        <img src="img/24.jpg">
+        <p></p>
+        <p>Roses Shoes</p>
+        <p><b> Rp 79.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    
+    
+    
+
+<!--Product27-->      
+<div class="block">    
+<span data-toggle="modal" data-target="#myModal27">    
+    <img src="img/27.jpg" height="60%"></span>
+    <p></p>
+    <p>Candy Dress</p>
+    <p><b> Rp 65.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
+</div>      
+ 
+<!--Modal27-->    
+<div class="modal fade" id="myModal27" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel27">Candy Dress</h4>
+        <div>
+        
+        <img src="img/27.jpg">
+        <p></p>
+        <p>Candy Dress</p>
+        <p><b> Rp 65.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>     
+    
+<!--Product28-->      
+<div class="block">    
+<span data-toggle="modal" data-target="#myModal28">     
+    <img src="img/28.jpg" height="60%"></span>
+    <p></p>
+    <p>Swirl Yellow Dress</p>
+    <p><b> Rp 75.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
+</div>      
+
+<!--Modal28-->    
+<div class="modal fade" id="myModal28" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel28">Swirl Yellow Dress</h4>
+        <div>
+        
+        <img src="img/28.jpg">
+        <p></p>
+        <p>Swirl Yellow Dress</p>
+        <p><b> Rp 75.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>      
+    
+<!--Product29-->      
+<div class="block">    
+<span data-toggle="modal" data-target="#myModal29">      
+    <img src="img/29.jpg" height="60%"></span>
+    <p></p>
+    <p>I Heart T-shirt</p>
+    <p><b> Rp 49.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
+</div>      
+ 
+<!--Modal29-->    
+<div class="modal fade" id="myModal29" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel29">I Heart T-shirt</h4>
+        <div>
+        
+        <img src="img/29.jpg">
+        <p></p>
+        <p>I Heart T-shirt</p>
+        <p><b> Rp 49.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>     
+    
+  
+    
+<!--Product31-->      
+<div class="block">    
+<span data-toggle="modal" data-target="#myModal31">    
+    <img src="img/31.jpg" height="60%"></span>
+    <p></p>
+    <p>Red Red Dress</p>
+    <p><b> Rp 62.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
+</div>      
+ 
+<!--Modal31-->    
+<div class="modal fade" id="myModal31" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel31">Red Red Dress</h4>
+        <div>
+        
+        <img src="img/31.jpg">
+        <p></p>
+        <p>Red Red Dress</p>
+        <p><b> Rp 62.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>     
+    
+    
+<!--Product32-->      
+<div class="block">    
+<span data-toggle="modal" data-target="#myModal32"> 
+    <img src="img/32.jpg" height="60%"></span>
+    <p>Dress Full of Bow</p>
+    <p><b> Rp 52.000</b></p>
+    <p></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
+</div>     
+  
+<!--Modal32-->    
+<div class="modal fade" id="myModal32" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel32">Dress Full of Bow</h4>
+        <div>
+        
+        <img src="img/32.jpg">
+        <p></p>
+        <p>Dress Full of Bow</p>
+        <p><b> Rp 52.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>      
+    
+<!--Product33-->      
+<div class="block">    
+<span data-toggle="modal" data-target="#myModal33">   
+    <img src="img/34.jpg" height="60%"></span>
     <p></p>
     <p>Mini Me Dress</p>
-<p><b> Rp 75.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 55.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>  
     
+<!--Modal33-->    
+<div class="modal fade" id="myModal33" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel33">Mini Me Dress</h4>
+        <div>
+        
+        <img src="img/34.jpg">
+        <p></p>
+        <p>Mini Me Dress</p>
+        <p><b> Rp 55.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+    
+<!--Product34-->      
 <div class="block">    
-<img src="img/35.jpg" height="60%">
+<span data-toggle="modal" data-target="#myModal34">
+    <img src="img/35.jpg" height="60%"></span>
     <p></p>
     <p>Flowery Dress</p>
-<p><b> Rp 59.000</b> </p>
-    <p></p>
-<button><i class="fa fa-shopping-cart"></i> Beli</button>
-<button><i class="fa fa-heart"></i> Suka</button>
-<button><i class="fa fa-share"></i> Bagikan</button>
+    <p><b> Rp 59.000</b></p>
+<div class="btn_center">    
+<button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+<button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+<button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+</div>  
 </div>      
+     
+<!--Modal34-->    
+<div class="modal fade" id="myModal34" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel34">Flowery Dress</h4>
+        <div>
+        
+        <img src="img/35.jpg">
+        <p></p>
+        <p>Flowery Dress</p>
+        <p><b> Rp 59.000</b></p>
+            
+        <div class="btn_center">    
+        <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
+        <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
+        <button class="btn btn-default btn-color2"><i class="fa fa-shopping-cart"></i> Beli</button> 
+        </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>          
+   
        
     
       
-</div>  <!--setupBlocks function end-->      
+</div><!-- End div id=product-->   
 
 
 <footer>

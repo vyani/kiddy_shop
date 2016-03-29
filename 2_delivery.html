@@ -27,29 +27,47 @@
 <body id="body">
 <div class="container">
 <div id="Checkout" class="inline">
-      <h1>Keranjang Belanja</h1>
+      <h1>Pengiriman</h1>
       <!--<div class="card-row">
           <span class="visa"></span>
           <span class="mastercard"></span>
           <span class="amex"></span>
           <span class="discover"></span>
       </div>-->
-    <ul class="order-list" style="margin-top: 5%">
-      <li><img src="img/4.jpg"><h4>Polka Striped</h4><h5>Rp 59.000</h5></li>
-      <li><img src=img/13.png><h4>Tweedy Buneey Hat</h4><h5>Rp 49.000</h5></li>
-      <li><img src='img/7.jpg'><h4>Goldie Shiny Shoes</h4><h5>Rp 65.000</h5></li>
-    </ul>   
-    
+     
       <form>
+          
+          <div class="form-group" style="margin-top: 5%">
+              <label or="NameOnCard">Nama Lengkap</label>
+              <input id="NameOnCard" class="form-control" type="text" maxlength="255">
+          </div>
+     
+           <div class="form-group">
+              <label or="NameOnCard">Email</label>
+              <input id="NameOnCard" class="form-control" type="text" maxlength="255">
+          </div>
+          
           <div class="form-group">
-              <label for="PaymentAmount">Jumlah</label>
-              <div class="amount-placeholder">
-                  <span>Rp</span>
-                  <span>173.000</span>
+              <label for="CreditCardNumber">No Telepon</label>
+              <input id="CreditCardNumber" class="null card-image form-control" type="text">
+          </div>
+    
+          <div class="form-group">
+              <label or="NameOnCard">Alamat</label>
+              <input id="NameOnCard" class="form-control" type="text" maxlength="255">
+          </div>
+    
+          
+    
+          <div class="zip-code-group form-group">
+              <label for="ZIPCode">ZIP/Postal code</label>
+              <div class="input-container">
+                  <input id="ZIPCode" class="form-control" type="text" maxlength="10">
+                  <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Enter the ZIP/Postal code for your credit card billing address."><i class="fa fa-question-circle"></i></a>
               </div>
           </div>
     
-          <a href="2_delivery.html" id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
+          <a href="3_payment.html" id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
               <span class="align-middle">Selanjutnya</span>
           </a>
       </form>

@@ -41,6 +41,9 @@ $(function(){
     $(window).resize(setupBlocks);
 });  
 
+var viewportWidth = $(window).width();
+var viewportHeight = $(window).height();    
+    
 function setupBlocks() {
 	windowWidth = $(window).width();
 	blocks = [];

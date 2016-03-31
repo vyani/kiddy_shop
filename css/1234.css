@@ -68,6 +68,29 @@
   color: #FFF!important;
 }
 
+#ProsesButton {
+  outline: 0!important;
+  height: 42px;
+  font-size: 16px;
+  background-color: #FF6B6B !important;
+  border: none;
+}
+
+#ProsesButton:hover {
+  background-color: #ff7979!important;
+}
+
+#ProsesButton:active {
+  background-color: #ff6b6b!important;
+}
+
+#ProsesButton:disabled {
+  background: rgba(84, 199, 195, .5)!important;
+  color: #FFF!important;
+}
+
+
+
 .container {
   margin-top: 50px;
 }
@@ -277,3 +300,6 @@ ul.order-list li:hover > h5 {
     margin-top: 3px;
     display: block; 
 }
+
+
+

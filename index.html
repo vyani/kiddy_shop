@@ -4,9 +4,11 @@
 <head>
     
     <title>Kiddy Shop</title>
+
+<meta name="viewport" content="width=400">         
+<link rel=stylesheet type="text/css" href="css/big_project.css">
     
-<link rel=stylesheet type="text/css" href="css/big_project.css"> 
-   
+<meta name="viewport" content="width=400">    
 <!--google font-->    
 <link href='https://fonts.googleapis.com/css?family=Roboto:700|Open+Sans:400,700' rel='stylesheet' type='text/css'>  
 
@@ -36,6 +38,9 @@ var spaceLeft = 20;
 var windowWidth = 1200;
 var blocks = [];
 
+var viewportWidth = $(window).width();
+var viewportHeight = $(window).height();
+    
 $(function(){
     $(window).resize(setupBlocks);
 });  

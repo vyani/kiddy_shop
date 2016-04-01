@@ -54,7 +54,7 @@ p {
 }
 
 
-/*NAVBAR: Fixed at top lg md*/
+/*NAVBAR: Fixed at top lg md sm*/
 .topnav{
     z-index: 1;
 }
@@ -79,9 +79,13 @@ ul.topnav li a {
     text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #ffeead; height: inherit;}
+ul.topnav li a:hover:not(.active) {
+    background-color: #ffeead !important; 
+}
 
-ul.topnav li a.active {background-color: #FF6B6B;}
+ul.topnav li a.active {
+    background-color: #FF6B6B;
+}
 
 ul.topnav li.right {float: right; padding-top: 0.4%}
 
@@ -94,7 +98,7 @@ ul.topnav li.right {float: right; padding-top: 0.4%}
   position: fixed; top: 0px;
 }
 
-/*NAVBAR: Fixed at top sm xs*/
+/*NAVBAR: Fixed at top xs*/
 body {margin:0;}
 
 .icon-bar {
@@ -107,33 +111,35 @@ body {margin:0;}
 
 .icon-bar a {
     width: 20%;
-    padding: 17px 0;
+    padding: 18px 0;
     transition: all 0.3s ease;
-    color: white;
-    font-size: 24px;
+    color: black;
+    font-size: 20px;
 }
 
 .icon-bar a:hover {
     background-color: #ffeead;
-    padding: 17px 0;
+    padding: 18px 0;
 }
 
 .active1 {
     background-color: #FF6B6B;
-    width: 40%;
-    padding: 12px 0;
+
 }
     
 .kiddyshop{
     float: left;
+    width: 40%;
+    padding: 14px 0;
     }    
     
-    .floatright{
+.floatright{
         float:right;
     }
 
 .icon-bar.fixedattop {
   position: fixed; top: 0px;
+    width: 100%;
 }
 
 

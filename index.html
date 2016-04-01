@@ -7,8 +7,7 @@
 
 <meta name="viewport" content="width=400">         
 <link rel=stylesheet type="text/css" href="css/big_project.css">
-    
-<meta name="viewport" content="width=400">    
+      
 <!--google font-->    
 <link href='https://fonts.googleapis.com/css?family=Roboto:700|Open+Sans:400,700' rel='stylesheet' type='text/css'>  
 
@@ -78,7 +77,7 @@ Array.min = function(array) {
     return Math.min.apply(Math, array);
 };
 
-/*sticky navbar*/
+/*Sticky navbar lg md sm*/
 $(document).scroll(function() {
   var documentScrollTop = $(document).scrollTop();
   if (documentScrollTop > $('#header').height()) {
@@ -92,27 +91,50 @@ $(document).scroll(function() {
   }
 });    
 
+/*Sticky navbar xs*/    
+$(document).scroll(function() {
+  var documentScrollTop = $(document).scrollTop();
+  if (documentScrollTop > $('#header').height()) {
+    $('.icon-bar').addClass('fixedattop');
+    var shiftContent = $('.topnav').height();
+    $('#content').css('margin-top', shiftContent + 'px');
+  }
+  else if ($('.icon-bar').hasClass('fixedattop')) {
+    $('.icon-bar').removeClass('fixedattop');
+    $('#header').css('margin-top', '0px');
+  }
+});    
+    
 /*footer*/
   
 </script>     
 </head>
 
 <body onload="setupBlocks();">   
-<!--front cover-->   
+<!--Front cover-->   
 <div class="container-fluid">
 <h1 class="title" style="text-align: center"> <b>KIDDY SHOP</b></h1>      
 <h3 class="subtitle" style="text-align: center"> Belanja baju anak. Kualitas Ok, Harga terjangkau.</h3>
 </div>    
   
-<!--top navigation -->   
-<ul class="topnav">
+<!--Top navigation --> 
+<!--Visible lg md sm-->    
+<ul class="topnav visible-lg visible-md visible-sm">
     <li><a href="index.html" class="active" style="font-family: Roboto; font-size: 18px"><b>KiddyShop.id</b></a></li>
     <li><a href="putri.html"><b>Putri</b></a></li>
     <li><a href="putra.html"><b>Putra</b></a></li>
     <li class="right"><a href="#"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
 </ul> 
 
-
+<!--Top navigation -->
+<!--Visible xs--> 
+<div class="icon-bar visible-xs">
+  <a href="#"><span class="active1 kiddyshop">KiddyShop.id</span></a>
+  <a href="#" class="floatright"><i class="fa fa-shopping-cart fa-lg"></i></a> 
+    <a href="#" class="floatright"><i class="fa fa-male fa-lg"></i></a>
+    <a href="#" class="floatright"><i class="fa fa-female fa-lg"></i></a>
+</div>  
+    
 <!--Image header background-->
 <div id="header">    
 <div class="row">
@@ -133,7 +155,7 @@ $(document).scroll(function() {
     <img src="img/1.jpg" height="40%"></span>
     <p></p>    
     <p>Gray Hoodie</p>
-    <p><b> Rp 60.000</b> </p>
+    <p><b> Rp 40.000</b> </p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -153,7 +175,9 @@ $(document).scroll(function() {
         <img src="img/1.jpg" height="40%">
         <p></p>
         <p>Gray Hoodie</p>
-        <p><b> Rp 60.000</b></p>
+        <p><b> Rp 40.000</b></p>
+        <p> Bahan katun </p>
+        <p> Usia: 6, 7, 8</p>
     
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -172,7 +196,7 @@ $(document).scroll(function() {
     <img src="img/2.jpg"></span>  
     <p></p>
     <p>Marc J Tshirt</p>
-    <p><b> Rp 50.000</b> </p>
+    <p><b> Rp 30.000</b> </p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -192,7 +216,9 @@ $(document).scroll(function() {
         <img src="img/2.jpg">
         <p></p>
         <p>Marc J Tshirt</p>
-        <p><b> Rp 50.000</b> </p>    
+        <p><b> Rp 30.000</b> </p> 
+        <p> Bahan katun </p>
+        <p> Usia: 6, 7, 8</p>
     
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -212,7 +238,7 @@ $(document).scroll(function() {
     <img src="img/3.jpg"></span>
     <p></p>
     <p>Greeny Pants</p>
-<p><b> Rp 69.000</b> </p>
+<p><b> Rp 49.000</b> </p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -232,7 +258,7 @@ $(document).scroll(function() {
         <img src="img/3.jpg">
         <p></p>
         <p>Greeny Pants</p>
-        <p><b> Rp 69.000</b> </p>    
+        <p><b> Rp 49.000</b> </p>    
     
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -252,7 +278,7 @@ $(document).scroll(function() {
     <img src="img/4.jpg"></span>
     <p></p>
     <p>Polka Striped</p>
-    <p><b> Rp 59.000</b></p>
+    <p><b> Rp 39.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -272,8 +298,10 @@ $(document).scroll(function() {
         <img src="img/4.jpg">
         <p></p>
         <p>Polka Striped</p>
-        <p><b> Rp 59.000</b></p>    
-    
+        <p><b> Rp 39.000</b></p>    
+        <p> Bahan katun </p>
+        <p> Usia: 6, 7, 8</p>
+            
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
         <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -291,7 +319,7 @@ $(document).scroll(function() {
     <img src="img/5.jpg"></span>
     <p></p>
     <p>GAP-GAP Jacket</p>
-    <p><b> Rp 79.000</b> </p>
+    <p><b> Rp 49.000</b> </p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -311,8 +339,10 @@ $(document).scroll(function() {
         <img src="img/5.jpg">
         <p></p>
         <p>GAP-GAP Jacket</p>
-        <p><b> Rp 79.000</b> </p>    
-    
+        <p><b> Rp 49.000</b> </p>    
+        <p> Bahan katun </p>
+        <p> Usia: 6, 7, 8</p>
+            
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
         <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -350,7 +380,9 @@ $(document).scroll(function() {
         <img src="img/6.jpg">
         <p></p>
         <p>Alura Dress</p>
-        <p><b> Rp 55.000</b></p>    
+        <p><b> Rp 55.000</b></p> 
+        <p> Bahan katun </p>
+        <p> Usia: 6, 7, 8</p>    
     
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -369,7 +401,7 @@ $(document).scroll(function() {
     <img src="img/7.jpg" height="40%" alt="baju anak murah"></span>
     <p></p>
     <p>Goldie Shiny Shoes</p>
-    <p><b> Rp 65.000</b></p>
+    <p><b> Rp 45.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -389,7 +421,9 @@ $(document).scroll(function() {
         <img src="img/7.jpg">
         <p></p>
         <p>Goldie Shiny Shoes</p>
-        <p><b> Rp 65.000</b></p>    
+        <p><b> Rp 45.000</b></p> 
+        <p> Bahan katun </p>
+        <p> Usia: 6, 7, 8</p>
     
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -408,7 +442,7 @@ $(document).scroll(function() {
     <img src="img/8.jpeg"></span>
     <p></p>
     <p>Blue DG Sandals </p>
-    <p><b> Rp 59.000</b></p>
+    <p><b> Rp 49.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -428,7 +462,9 @@ $(document).scroll(function() {
         <img src="img/8.jpeg">
         <p></p>
         <p>Blue DG Sandals </p>
-        <p><b> Rp 59.000</b></p>    
+        <p><b> Rp 49.000</b></p>
+        <p> Bahan katun </p>
+        <p> Usia: 6, 7, 8</p>
     
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -447,7 +483,7 @@ $(document).scroll(function() {
     <img src="img/9.jpg"></span>
     <p></p>
     <p>Litlle Blue Blazer</p>
-    <p><b> Rp 55.000</b></p>
+    <p><b> Rp 50.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -467,7 +503,7 @@ $(document).scroll(function() {
         <img src="img/9.jpg">
         <p></p>
         <p>Litlle Blue Blazer</p>
-        <p><b> Rp 55.000</b></p>    
+        <p><b> Rp 50.000</b></p>    
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -486,7 +522,7 @@ $(document).scroll(function() {
     <img src="img/10.jpg"></span>
     <p></p>
     <p>Teeth-shirt Jacket</p>
-    <p><b> Rp 59.000</b></p>   
+    <p><b> Rp 42.000</b></p>   
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -506,7 +542,7 @@ $(document).scroll(function() {
         <img src="img/10.jpg">
         <p></p>
         <p>Teeth-shirt Jacket</p>
-        <p><b> Rp 59.000</b></p>   
+        <p><b> Rp 42.000</b></p>   
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -525,7 +561,7 @@ $(document).scroll(function() {
     <img src="img/11.jpg"></span>
     <p></p>
     <p>My Kind of Shirt</p>
-    <p><b> Rp 52.000</b></p>
+    <p><b> Rp 39.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -545,7 +581,7 @@ $(document).scroll(function() {
         <img src="img/11.jpg">
         <p></p>
         <p>My Kind of Shirt</p>
-        <p><b> Rp 52.000</b></p>   
+        <p><b> Rp 39.000</b></p>   
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -564,7 +600,7 @@ $(document).scroll(function() {
     <img src="img/13.png" height="60%"></span>
     <p></p>
     <p>Tweedy Bunny Hat</p>
-    <p><b> Rp 49.000</b></p>
+    <p><b> Rp 29.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -584,7 +620,7 @@ $(document).scroll(function() {
         <img src="img/13.png">
         <p></p>
         <p>Tweedy Bunny Hat</p>
-        <p><b> Rp 49.000</b></p>  
+        <p><b> Rp 29.000</b></p>  
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -603,7 +639,7 @@ $(document).scroll(function() {
     <img src="img/14.png" height="60%"></span>
     <p></p>
     <p>Bonjour Petite Sweat Shirt</p>
-    <p><b> Rp 49.000</b></p>
+    <p><b> Rp 39.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -623,7 +659,7 @@ $(document).scroll(function() {
         <img src="img/14.png">
         <p></p>
         <p>Bonjour Petite Sweat Shirt</p>
-        <p><b> Rp 49.000</b></p>  
+        <p><b> Rp 39.000</b></p>  
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -642,7 +678,7 @@ $(document).scroll(function() {
     <img src="img/15.jpeg" height="60%"></span>
     <p></p>
     <p>Mineey Sweater</p>
-    <p><b> Rp 69.000</b></p>
+    <p><b> Rp 50.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -662,7 +698,7 @@ $(document).scroll(function() {
         <img src="img/15.jpeg">
         <p></p>
         <p>Mineey Sweater</p>
-        <p><b> Rp 69.000</b></p>  
+        <p><b> Rp 50.000</b></p>  
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -681,7 +717,7 @@ $(document).scroll(function() {
     <img src="img/15.jpg" height="60%"></span>
     <p></p>
     <p>Buneey Sweater</p>
-    <p><b> Rp 69.000</b></p>
+    <p><b> Rp 49.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -701,7 +737,7 @@ $(document).scroll(function() {
         <img src="img/15.jpg">
         <p></p>
         <p>Buneey Sweater</p>
-        <p><b> Rp 69.000</b></p> 
+        <p><b> Rp 49.000</b></p> 
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -759,7 +795,7 @@ $(document).scroll(function() {
     <img src="img/17.jpg" height="60%"></span>
     <p></p>
     <p>Lace Me Up</p>
-    <p><b> Rp 79.000</b></p>
+    <p><b> Rp 50.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -779,7 +815,7 @@ $(document).scroll(function() {
         <img src="img/17.jpg">
         <p></p>
         <p>Lace Me Up</p>
-        <p><b> Rp 79.000</b></p>
+        <p><b> Rp 50.000</b></p>
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -798,7 +834,7 @@ $(document).scroll(function() {
     <img src="img/18.jpg" height="60%"></span>
     <p></p>
     <p>Your Kingdom Dress</p>
-    <p><b> Rp 69.000</b></p>
+    <p><b> Rp 45.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -818,7 +854,7 @@ $(document).scroll(function() {
         <img src="img/18.jpg">
         <p></p>
         <p>Your Kingdom Dress</p>
-        <p><b> Rp 69.000</b></p>
+        <p><b> Rp 45.000</b></p>
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -837,7 +873,7 @@ $(document).scroll(function() {
     <img src="img/19.jpg" height="60%"></span>
     <p></p>
     <p>It's Nice, Overall</p>
-    <p><b> Rp 65.000</b></p>
+    <p><b> Rp 50.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -857,7 +893,7 @@ $(document).scroll(function() {
         <img src="img/19.jpg">
         <p></p>
         <p>It's Nice, Overall</p>
-        <p><b> Rp 65.000</b></p>
+        <p><b> Rp 50.000</b></p>
         
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -915,7 +951,7 @@ $(document).scroll(function() {
     <img src="img/21.jpg" height="60%"></span>
     <p></p>
     <p>Ooh Lala Shoes</p>
-    <p><b> Rp 89.000</b></p>
+    <p><b> Rp 49.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -935,7 +971,7 @@ $(document).scroll(function() {
         <img src="img/21.jpg">
         <p></p>
         <p>Ooh Lala Shoes</p>
-        <p><b> Rp 89.000</b></p>
+        <p><b> Rp 49.000</b></p>
             
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -1032,7 +1068,7 @@ $(document).scroll(function() {
     <img src="img/24.jpg" height="60%"></span>
     <p></p>
     <p>Roses Shoes</p>
-    <p><b> Rp 79.000</b></p>
+    <p><b> Rp 50.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -1052,7 +1088,7 @@ $(document).scroll(function() {
         <img src="img/24.jpg">
         <p></p>
         <p>Roses Shoes</p>
-        <p><b> Rp 79.000</b></p>
+        <p><b> Rp 50.000</b></p>
             
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -1149,7 +1185,7 @@ $(document).scroll(function() {
     <img src="img/27.jpg" height="60%"></span>
     <p></p>
     <p>Candy Dress</p>
-    <p><b> Rp 65.000</b></p>
+    <p><b> Rp 55.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -1169,7 +1205,7 @@ $(document).scroll(function() {
         <img src="img/27.jpg">
         <p></p>
         <p>Candy Dress</p>
-        <p><b> Rp 65.000</b></p>
+        <p><b> Rp 55.000</b></p>
             
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -1188,7 +1224,7 @@ $(document).scroll(function() {
     <img src="img/28.jpg" height="60%"></span>
     <p></p>
     <p>Swirl Yellow Dress</p>
-    <p><b> Rp 75.000</b></p>
+    <p><b> Rp 55.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -1208,7 +1244,7 @@ $(document).scroll(function() {
         <img src="img/28.jpg">
         <p></p>
         <p>Swirl Yellow Dress</p>
-        <p><b> Rp 75.000</b></p>
+        <p><b> Rp 55.000</b></p>
             
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -1305,7 +1341,7 @@ $(document).scroll(function() {
     <img src="img/31.jpg" height="60%"></span>
     <p></p>
     <p>Red Red Dress</p>
-    <p><b> Rp 62.000</b></p>
+    <p><b> Rp 52.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -1325,7 +1361,7 @@ $(document).scroll(function() {
         <img src="img/31.jpg">
         <p></p>
         <p>Red Red Dress</p>
-        <p><b> Rp 62.000</b></p>
+        <p><b> Rp 52.000</b></p>
             
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
@@ -1423,7 +1459,7 @@ $(document).scroll(function() {
     <img src="img/35.jpg" height="60%"></span>
     <p></p>
     <p>Flowery Dress</p>
-    <p><b> Rp 59.000</b></p>
+    <p><b> Rp 49.000</b></p>
 <div class="btn_center">    
 <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>
 <button class="btn btn-default btn-color1"><i class="fa fa-share"></i> Bagikan</button>
@@ -1443,7 +1479,7 @@ $(document).scroll(function() {
         <img src="img/35.jpg">
         <p></p>
         <p>Flowery Dress</p>
-        <p><b> Rp 59.000</b></p>
+        <p><b> Rp 49.000</b></p>
             
         <div class="btn_center">    
         <button class="btn btn-default btn-color1"><i class="fa fa-heart"></i> Suka</button>

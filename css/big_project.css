@@ -54,7 +54,7 @@ p {
 }
 
 
-/*NAVBAR: Fixed at top*/
+/*NAVBAR: Fixed at top lg md*/
 .topnav{
     z-index: 1;
 }
@@ -91,6 +91,48 @@ ul.topnav li.right {float: right; padding-top: 0.4%}
 }
 
 .topnav.fixedattop {
+  position: fixed; top: 0px;
+}
+
+/*NAVBAR: Fixed at top sm xs*/
+body {margin:0;}
+
+.icon-bar {
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    background-color: #4ECDC4;
+    overflow: auto;
+}
+
+.icon-bar a {
+    width: 20%;
+    padding: 17px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 24px;
+}
+
+.icon-bar a:hover {
+    background-color: #ffeead;
+    padding: 17px 0;
+}
+
+.active1 {
+    background-color: #FF6B6B;
+    width: 40%;
+    padding: 12px 0;
+}
+    
+.kiddyshop{
+    float: left;
+    }    
+    
+    .floatright{
+        float:right;
+    }
+
+.icon-bar.fixedattop {
   position: fixed; top: 0px;
 }
 

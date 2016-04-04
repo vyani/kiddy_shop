@@ -1,63 +1,359 @@
 <!DOCTYPE>
 <html>
-  
-<head>    
-<meta name="viewport" content="width=400">
     
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>    
+<head>
     
+    <title>Kiddy Shop</title>
+
+<meta name="viewport" content="width=400">        
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">--> 
     
+<link rel=stylesheet type="text/css" href="css/1234.css">     
+    
+<!--bootstrap-->    
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/script-centered.js"></script>
+    
+<!--font & fa-->    
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">    
+
 <style>
-body {margin:0;}
+@import url("http://fonts.googleapis.com/css?family=Roboto");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
-.icon-bar {
-    width: 100%;
-    text-align: center;
-    background-color: #4ECDC4;
-    overflow: auto;
+/******************************
+Table
+******************************/   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.icon-bar a {
-    width: 20%;
-    padding: 17px 0;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 24px;
+html, body {
+    height: 100%;
 }
 
-.icon-bar a:hover {
-    background-color: #ffeead;
-    padding: 17px 0;
+body {
+    font-size: 100%;
+    font: 12px 'Roboto', sans-serif;
+    color: #555;
+    background: #eee;
 }
 
-.active {
-    background-color: #FF6B6B;
-    width: 40%;
-    padding: 12px 0;
+
+/******************************
+SVG Icons
+******************************/
+
+svg {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
 }
-    
-.kiddyshop{
+
+svg.svg-debit {
+    top: 5px;
+    right: 17px;
+    width: 40px;
+    height: 40px;
+}
+
+svg.svg-visa {
+    right: 125px;
+}
+
+svg.svg-master {
+    right: 70px;
+}
+
+svg.svg-sofort {
+    top: -8px;
+    right: 8px;
+    width: 65px;
+    height: 65px;
+}
+
+.svg-cash-hand {
+    fill: #FFCA65;
+}
+
+.svg-cash-thumb {
+    stroke: #FBAD3E;
+    fill: none;
+}
+
+.svg-cash-money {
+    fill: #34b154;
+}
+
+.svg-cash-money-inner {
+    fill: #fff;
+    opacity: .4;
+}
+
+.svg-cash-shirt-inner {
+    fill: #def;
+}
+
+.svg-cash-shirt-outer {
+    fill: #07b;
+}
+
+.svg-debit-card {
+    fill: #e5e5e5;
+}
+
+.svg-debit-data {
+    fill: #bbb;
+}
+
+.svg-debit-sign {
+    fill: #fff;
+}
+
+.svg-debit-read {
+    fill: #555;
+}
+
+.svg-visa-border {
+    fill: #005098;
+}
+
+.svg-visa-letter {
+    fill: #005098;
+}
+
+.svg-visa-corner {
+  fill: #F6A500;
+}
+
+.svg-master-border {
+  fill: #E30613;
+}
+
+.svg-master-circle1 {
+  fill: #E40520;
+}
+
+.svg-master-circle2 {
+  fill: #FAB31E;
+}
+
+.svg-master-letter {
+  fill: #fff;
+}
+
+
+
+/******************************
+Buttons
+******************************/
+.button {
+  position: relative;
+  height: 50px;
+  padding: 0 0 0 50px;
+  font-size: 14px;
+  line-height: 48px;
+  border-bottom: 1px solid #bbb;
+  background: #fafafa;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #f5f5f5;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px #bbb, inset 0 0 0 7px #fff;
+  background: #fff;
+}
+
+.button:hover:after {
+  background: #bbb;
+}
+
+.button.active:after {
+  background: #555;
+}
+
+/******************************
+Responsive SGV 400px
+******************************/
+@media all and (min-width: 400px) {
+  svg {
+    top: 6px;
+    right: 15px;
+    width: 30px;
+    height: 50px;
+  }
+
+  svg.svg-debit {
+    top: 7px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  svg.svg-visa {
+    right: 55px;
+  }
+
+  svg.svg-master {
+    right: 20px;
+  }
+
+  svg.svg-sofort {
+    top: -14px;
+    right: 15px;
+    width: 85px;
+    height: 85px;
+  }
+
+  .button {
+    height: 60px;
+    padding: 0 0 0 60px;
+    font-size: 18px;
+    line-height: 58px;
+  }
+
+  .button:after {
+    top: 20px;
+    left: 23px;
+  }
+}
+
+/******************************
+Responsive SGV 600px
+******************************/
+@media all and (min-width: 600px) {
+  svg {
+    top: auto !important;
+    right: 0 !important;
+    left: 0;
+    margin: auto;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+  }
+
+  svg.svg-cash {
+    bottom: 5px;
+    width: 60px;
+    height: 60px;
+  }
+
+  svg.svg-debit {
+    width: 60px;
+    height: 60px;
+  }
+
+  svg.svg-visa {
+    bottom: 45px;
+    width: 50px;
+    height: 50px;
+  }
+
+  svg.svg-master {
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .svg-visa-border,
+  .svg-master-border,
+  .svg-click-border {
+    display: none;
+  }
+
+  .payments {
+    max-width: 370px;
+    margin: 0 auto;
+    padding: 25px;
+    overflow: hidden;
+  }
+
+  .button {
     float: left;
-    }    
-    
-    .floatright{
-        float:right;
-    }
-    
-</style>
-<body>
+    width: 100px;
+    height: 150px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    padding: 50px 0 0;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px #bbb;
+  }
+
+  .button:last-child {
+    margin-right: 0;
+  }
+
+  .button:after {
+    top: 15px;
+    left: 40px;
+  }
+}
 
     
-<div class="icon-bar">
-  <a href="#"><span class="active kiddyshop">KiddyShop.id</span></a>
-  <a href="#" class="floatright"><i class="fa fa-shopping-cart fa-lg"></i></a> 
-    <a href="#" class="floatright"><i class="fa fa-male fa-lg"></i></a>
-    <a href="#" class="floatright"><i class="fa fa-female fa-lg"></i></a>
-  
-  
-</div>
+</style>    
 
-</body>
-</html> 
+<script>
+    $(document).ready(function() {
+  $('.button').on('click', function() {
+    $('.button').removeClass('active');
+    $(this).toggleClass('active');
+  });
+});
+</script>  
+</head>
+
+<body id="body">
+<div class="container">
+<div id="Checkout" class="inline">
+
+<h1>Yes!</h1>
+      
+<form>
+          
+    <div class="main">
+
+        <div class='payments' style="margin-top:5%">
+
+        <p style="font-size: 20px">Pesanan Anda, telah sedang kami proses. Cek email Anda untuk konfirmasi pembayaran.</p>
+
+  </div><!--class payment-->
+</div><!--class main-->
+    
+          <a href="index.html" id="ProsesButton" class="btn btn-block btn-success submit-button" type="submit" style="margin-top: 5%">
+              <span class="align-middle"> Terima Kasih</span>
+          </a>
+      </form>
+  </div>   <!---checkout inline-->  
+</div> <!--class container-->        
+    
+</body>    
+    
+    
+</html>

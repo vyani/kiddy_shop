@@ -232,20 +232,34 @@ img {
     margin: 0 auto;width: 300px;
 }
 
-/*FOOTER*/
+/*FOOTER
 #footer {
 	background:#4ECDC4;
 	padding:10px;
 	text-align:center;
     clear: both;
-	}
+	}*/
+.d_footer
+{
+    position: fixed;
+    bottom:0px;
+    background-color: #FF6B6B;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    width:100%;
+    text-align:center;
+    padding-top:7px;
+    padding-bottom:7px;
+    color:solid white !important;
+    
+}
 
-.wrap {
-    position:relative;
-    margin:0 auto;
-    width:900px;
-	}
 
+.resize{
+    max-width:25px;
+    max-height:25px;
+    margin-right: 2%;
 
-
+}
 
